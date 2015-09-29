@@ -55,9 +55,11 @@ dockerxman/docker-php bash
 ## 实例
 
 * db: 
+
 ```
 docker run -d -p 3306:3306 -v /data/wordpress/db:/var/lib/mysql --name mysql dockerxman/mysql
 ```
+
 ```
 ========================================================================
 You can now connect to this MySQL Server using:
@@ -70,6 +72,7 @@ MySQL user 'root' has no password but only allows local connections
 ```
 
 * web:
+
 ```
 docker run -d -p 80:80 -v /data/wordpress/web/wordpress/:/var/www/ --link mysql:db --name wordpress dockerxxman/php 
 ```
@@ -80,7 +83,7 @@ docker run -d -p 80:80 -v /data/wordpress/web/wordpress/:/var/www/ --link mysql:
 
 * 邮件: fenyunxx@163.com
 
-* [github](https://github.com/xiongjungit/docker-mysql)
+* [github](https://github.com/xiongjungit/docker-php)
 
 * [dockerhub](https://hub.docker.com/r/dockerxman/)
 
