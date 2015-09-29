@@ -52,6 +52,28 @@ docker run -d \
 dockerxman/docker-php bash
 ```
 
+## 实例
+
+1. db: 
+```
+docker run -d -p 3306:3306 -v /data/wordpress/db:/var/lib/mysql --name mysql dockerxman/mysql
+```
+```
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -pWxfLmXP2FFwa -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+```
+
+2. web:
+```
+docker run -d -p 80:80 -v /data/wordpress/web/wordpress/:/var/www/ --link mysql:db --name wordpress dockerxxman/php 
+```
+
 ## 代码创建和维护
 
 * QQ: 479608797
